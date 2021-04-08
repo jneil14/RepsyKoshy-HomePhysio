@@ -6,6 +6,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import Theme from './components/Theme';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import Homie from './components/Homie';
 import About from './components/About';
 import Contact from './components/Contact';
 import Services from './components/Services';
@@ -23,7 +24,7 @@ const useStyles = makeStyles({});
 function App() {
 
   const classes = useStyles();
-  console.log(Theme);
+
 
   return (
     <div className="App">

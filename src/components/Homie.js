@@ -168,7 +168,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       padding: "1rem",
       marginTop: "1rem",
-      marginBottom: "1rem"
+      marginBottom: "1rem",
     },
     [theme.breakpoints.up("sm")]: {
       padding: "1.5rem",
@@ -201,6 +201,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
 let services = [
   "Physiotherapy for Back and Neck Pain",
   "Ergonomics and Management of Work-related Musculoskeletal Injuries",
@@ -214,18 +215,19 @@ let services = [
   "Caregiver training and education"
 ];
 
-function Home() {
+
+
+
+
+function Homie() {
   const classes = useStyles();
   const theme = useTheme();
+  
+    let service = services.map((item, index) => {
+      return <li key={index} className={classes.servicesItem}>{item}</li>;
+    });
 
-  let service = services.map((item, index) => {
-    return (
-      <li key={index} className={classes.servicesItem}>
-        {item}
-      </li>
-    );
-  });
-
+    
   return (
     <>
       <Hero />
@@ -285,4 +287,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Homie;

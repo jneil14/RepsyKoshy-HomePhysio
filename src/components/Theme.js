@@ -1,6 +1,5 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import Navigation from './Navigation';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
 
 
@@ -31,8 +30,65 @@ const theme = createMuiTheme({
         padding: 0
       }
     }
+  },
+  // typography: {
+  //   fontFamily: [
+  //     'Oxygen',
+  //     'sans-serif'
+  //   ].join(',')
+  // }
+  typography: {
+    fontFamily: "Arvo"
   }
 });
+
+theme.typography.body1 = {
+  fontFamily: "Arvo",
+  lineHeight: "1.5rem",
+  fontSize: "1rem",
+  textAlign: "justify",
+  
+  [theme.breakpoints.up("sm")]: {
+    lineHeight: "2rem",
+    fontSize: "1rem",
+    textAlign: "justify"
+  },
+  [theme.breakpoints.up("md")]: {
+    lineHeight: "3rem",
+    fontSize: "2rem",
+    textAlign: "justify"
+  }
+};
+
+theme.typography.h1 = {
+  fontFamily: "Arvo",
+  lineHeight: "1.5rem",
+  fontSize: "1rem",
+
+  [theme.breakpoints.up("sm")]: {
+    lineHeight: "3rem",
+    fontSize: "2.5rem"
+  },
+  [theme.breakpoints.up("md")]: {
+    lineHeight: "5rem",
+    fontSize: "4.5rem"
+  }
+};
+
+theme.typography.h2 = {
+  fontFamily: "Arvo",
+  lineHeight: "1rem",
+  fontSize: "1rem",
+
+  [theme.breakpoints.up("sm")]: {
+    lineHeight: "2.5rem",
+    fontSize: "2rem"
+  },
+  [theme.breakpoints.up("md")]: {
+    lineHeight: "4rem",
+    fontSize: "3rem"
+  }
+};
 
 
 
