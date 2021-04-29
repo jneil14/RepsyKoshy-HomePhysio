@@ -60,10 +60,29 @@ theme.typography.body1 = {
   }
 };
 
+theme.typography.body2 = {
+  fontFamily: "Arvo",
+  lineHeight: "1.25rem",
+  fontSize: "1rem",
+  textAlign: "justify",
+
+  [theme.breakpoints.up("sm")]: {
+    lineHeight: "1.5rem",
+    fontSize: "1rem",
+    
+  },
+  [theme.breakpoints.up("md")]: {
+    lineHeight: "2.5rem",
+    fontSize: "2rem",
+    // textAlign: "justify"
+  }
+};
+
+
 theme.typography.h1 = {
   fontFamily: "Arvo",
   lineHeight: "1.5rem",
-  fontSize: "1rem",
+  fontSize: "1.5rem",
 
   [theme.breakpoints.up("sm")]: {
     lineHeight: "3rem",
@@ -89,6 +108,7 @@ theme.typography.h2 = {
     fontSize: "3rem"
   }
 };
+
 
 
 

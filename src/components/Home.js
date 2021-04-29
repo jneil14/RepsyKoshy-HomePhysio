@@ -19,24 +19,28 @@ const useStyles = makeStyles(theme => ({
   },
 
   homeContainer: {
+    width: "auto",
     [theme.breakpoints.down("xs")]: {
-      width: "auto",
       wordWrap: "break-word"
     },
 
     [theme.breakpoints.up("sm")]: {
-      width: "auto",
+      // width: "auto",
       wordWrap: "break-word",
       marginRight: "2rem",
       marginLeft: "2rem",
       padding: 0
     },
     [theme.breakpoints.up("md")]: {
-      width: "auto",
+      // width: "auto",
       marginLeft: "15rem",
       marginRight: "15rem",
       padding: "5rem"
     }
+  },
+  welcomeTextWrapper: {
+    width: "75vw",
+    wordWrap: "break-word"
   },
   //   welcomeTextWrapper: {
   //     [theme.breakpoints.down("xs")]: {
@@ -46,6 +50,7 @@ const useStyles = makeStyles(theme => ({
   //     }
   //   },
   welcomeText: {
+    wordWrap: "break-word",
     [theme.breakpoints.down("xs")]: {
       display: "flex",
       justifyContent: "flex-start",
@@ -68,6 +73,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   welcomeTextRepsy: {
+    wordWrap: "break-word",
     [theme.breakpoints.down("xs")]: {
       color: theme.palette.secondary.main,
       fontFamily: "Pacifico"
@@ -86,6 +92,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   welcomeTextKoshy: {
+    wordWrap: "break-word",
     [theme.breakpoints.down("xs")]: {
       color: theme.palette.primary.main,
       fontFamily: "Pacifico"
@@ -103,6 +110,15 @@ const useStyles = makeStyles(theme => ({
       fontSize: "3.5rem"
     }
   },
+
+  welcomeText: {
+    color: [theme.palette.secondary.main],
+    display: "flex",
+    flexGrow: 1
+  },
+  // welcomeSubText: {
+  //   color: [theme.palette.primary.main]
+  // },
 
   welcomeParagraph: {
     [theme.breakpoints.down("xs")]: {
@@ -124,24 +140,27 @@ const useStyles = makeStyles(theme => ({
   },
 
   howItWorksText: {
+    color: theme.palette.primary.dark,
+    display: "flex",
+    flexGrow: 1,
+    textDecoration: "underline",
     [theme.breakpoints.down("xs")]: {
       padding: "1rem",
-      display: "flex",
-      justifyContent: "flex-start",
-      textDecoration: "underline",
-      color: theme.palette.secondary.main
+      // display: "flex",
+      // justifyContent: "flex-start",
+      // textDecoration: "underline"
     },
     [theme.breakpoints.up("sm")]: {
-      display: "flex",
-      justifyContent: "flex-start",
+      // display: "flex",
+      // justifyContent: "flex-start",
+      // textDecoration: "underline",
       margin: "1rem",
-      textDecoration: "underline",
-      color: theme.palette.secondary.main
+      // color: theme.palette.secondary.main
     },
 
     [theme.breakpoints.up("md")]: {
       textDecoration: "underline",
-      color: theme.palette.secondary.main,
+      // color: theme.palette.secondary.main,
       paddingTop: "3rem"
     }
   },
@@ -233,12 +252,18 @@ function Home() {
       <div className={classes.root}>
         <Container className={classes.homeContainer}>
           <div className={classes.welcomeTextWrapper}>
-            <Typography variant="h1" className={classes.welcomeText}>
+            {/* <Typography variant="h1" className={classes.welcomeText}>
               Welcome to &nbsp;
               <span className={classes.welcomeTextRepsy}> Repsy </span> &nbsp;
               <span className={classes.welcomeTextKoshy}> Koshy </span> &nbsp;
               Clinic
+            </Typography> */}
+            <Typography variant="h1" className={classes.welcomeText}>
+              WELCOME!
             </Typography>
+            {/* <Typography variant="h2" className={classes.welcomeSubText}>
+              (LET THE HEALING BEGIN)
+            </Typography> */}
           </div>
           <Typography className={classes.welcomeParagraph} variant="body1">
             Physiotherapy is a healthcare profession which provides therapy
